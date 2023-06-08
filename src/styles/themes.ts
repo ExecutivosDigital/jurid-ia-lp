@@ -57,7 +57,16 @@ const Theme = {
     yellow_100: "#9DA5B4",
   },
   fonts: {},
-  sizes: {},
+  sizes: {
+    h1: "",
+    h2: "",
+    h3: "",
+    h4: "",
+    h5: "",
+    h6: "",
+    p: "",
+    text: "",
+  },
 };
 
 export default Theme;
