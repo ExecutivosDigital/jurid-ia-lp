@@ -65,4 +65,3 @@ $  git push -u origin main
         - Quando esse componente está sendo utilizado em mais de uma tela.
         - Quando esse componente possui uma lógica complexa de funcionamento que exige muitas linhas de código
         - Quando a estilização desse componente é muito extensa e ocupa muito espaço no arquivo dá pagina e no arquivo de estilos.
-
