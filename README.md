@@ -62,7 +62,7 @@ $  git push -u origin main
     - Componentes que são utilizados em mais de uma página deverão ser alocados na pasta Global
     - Componentes de páginas deverão ser organizados da seguinte maneira `src/components/[nome_da_página]/[nome_do_componente]`
     - Componentes deverão ser criados em três ocasiões:
-        1. Quando esse componente está sendo utilizado em mais de uma tela.
-        2. Quando esse componente possui uma lógica complexa de funcionamento que exige muitas linhas de código
-        3. Quando a estilização desse componente é muito extensa e ocupa muito espaço no arquivo dá pagina e no arquivo de estilos.
+        - Quando esse componente está sendo utilizado em mais de uma tela.
+        - Quando esse componente possui uma lógica complexa de funcionamento que exige muitas linhas de código
+        - Quando a estilização desse componente é muito extensa e ocupa muito espaço no arquivo dá pagina e no arquivo de estilos.
 
