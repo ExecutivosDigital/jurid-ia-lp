@@ -4,16 +4,37 @@ para formatar yarn prettier --write .
 
 ## Como Usar
 
+Para criar o projeto utilize o comando abaixo substituindo o [nome] pelo nome do projeto:
+
 ```bash
 # Criar Projeto
-$ yarn create next-app [nome] -e https://github.com/ExecutivosDigital/nextjs-layout
+$  yarn create next-app [nome] -e https://github.com/ExecutivosDigital/nextjs-layout
+```
 
-# Go into the repository
-$ cd electron-markdownify
+Acesse a pasta criada:
 
-# Install dependencies
-$ npm install
+```bash
+# Acesse a pasta
+$  cd [nome]
+```
 
-# Run the app
-$ npm start
+Adicione o repositório do GitHub do projeto:
+
+```bash
+# Adicione a remote origin
+$  git remote add origin [link_do_repositório]
+```
+
+Crie a branch main:
+
+```bash
+# Criar branch
+$  git branch -M main
+```
+
+Realize o primeiro push:
+
+```bash
+# Push
+$  git push -u origin main
 ```
