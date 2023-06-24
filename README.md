@@ -66,3 +66,8 @@ $  git push -u origin main
         2 - Quando esse componente possui uma lógica complexa de funcionamento que exige muitas linhas de código
         3 - Quando a estilização desse componente é muito extensa e ocupa muito espaço no arquivo dá pagina e no arquivo de estilos.
 
+- `--cmd`
+  - Changes the prefix of the `z` and `zi` commands.
+  - `--cmd j` would change the commands to (`j`, `ji`).
+  - `--cmd cd` would replace the `cd` command (doesn't work on Nushell / POSIX shells).
+- `--hook <HOOK>`
