@@ -60,7 +60,7 @@ $  git push -u origin main
     - Os componentes deverão ser divididos em Globais`(Pasta Global)` e componentes de páginas `(Page)`
     - Os nomes de pastas de componentes deverão iniciar com letra maiúscula
     - Componentes que são utilizados em mais de uma página deverão ser alocados na pasta Global
-    - Componentes de páginas deverão ser organizados da seguinte maneira `src/components/[nome_da_página]/[nome_do_componente]`
+    - Componentes de páginas deverão ser organizados da seguinte maneira `src/components/Page/[nome_da_página]/[nome_do_componente]`
     - Componentes deverão ser criados em três ocasiões:
         - Quando esse componente está sendo utilizado em mais de uma tela.
         - Quando esse componente possui uma lógica complexa de funcionamento que exige muitas linhas de código
