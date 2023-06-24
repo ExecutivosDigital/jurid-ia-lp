@@ -38,3 +38,15 @@ Realize o primeiro push:
 # Push
 $  git push -u origin main
 ```
+
+## Configurações Iniciais
+
+1. Acesse o arquivo lib/axios.ts
+    + `$ Altere a constante api_url para a url da API que será usada`
+    + `$ Altere a constante token para "[nome_do_projeto]token"`
+
+2. Acesse o arquivo styles/themes.ts
+    + `$ Altere as cores primárias baseado no projeto do Figma`
+    + `$ Altere as cores secundárias baseado no projeto do Figma`
+
+
