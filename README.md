@@ -41,21 +41,21 @@ $  git push -u origin main
 
 ## Configurações Iniciais
 
-1. Acesse o arquivo `lib/axios.ts`
+- Acesse o arquivo `lib/axios.ts`
     - Altere a constante `api_url` para a url da API que será usada
     - Altere a constante `token` para `[nome_do_projeto]token`
 
-2. Acesse o arquivo `styles/themes.ts`
+- Acesse o arquivo `styles/themes.ts`
     - Altere as cores primárias baseado no projeto do Figma
     - Altere as cores secundárias baseado no projeto do Figma
 
 
 ## Boas praticas para organização de arquivos
 
-1.  Bibliotecas que precisam de arquivos de configurações
+-  Bibliotecas que precisam de arquivos de configurações
     + Adicione as configurações em um arquivo na pasta `lib` com o nome da biblioteca
     
-2.  Criação de componentes
+-  Criação de componentes
     - Os componentes deverão ser criados em uma pasta localizada em `src/components`
     - Os componentes deverão ser divididos em Globais`(Pasta Global)` e componentes de páginas `(Page)`
     - Os nomes de pastas de componentes deverão iniciar com letra maiúscula
