@@ -19,21 +19,17 @@ interface Props {
   width?: string;
   height?: string;
   justifyContent?: string;
+  alignSelf?: string;
 }
-export const Container = styled.div`
-  //font-size: clamp(1rem, px2vw(50, 1024), 1.5rem);
-  display: flex;
-  background-color: ${Theme.color.primary_80};
-  flex-direction: column;
-`;
+
 export const Section = styled.div<Props>`
   display: flex;
   background-color: ${(props) => (props.color ? props.color : Theme.color.primary_80)};
   padding: 30px;
   height: ${(props) => (props.height ? props.height : null)};
   flex-direction: column;
-  justify-content: center;
-  border: none;
+
+
   @media (max-width: 500px) {
     //height: 90%;
     
@@ -42,83 +38,107 @@ export const Section = styled.div<Props>`
     
   }
 `;
+export const Container = styled.div`
+    display:flex;
+    align-self: center;
+    background-color: ${Theme.color.primary_100};
+    flex-direction: column;
+    height: 60%;
+    width: 100%;
+`;
+export const FormLogo = styled.div`
+    display:flex;
+    align-self: center;
+    justify-content: center;
+    background-color: transparent;
+    flex-direction: column;    
+    width: 100%;
+    @media (max-width: 500px) {   
+      margin-top: 20%;
+  }
+
+`;
 export const BigTitle = styled.label<Props>`
-  font-size: 70px;
+  font-size: 65px;
   font-family: bold;
   background-color: transparent;
   color: ${(props) => (props.color ? props.color : "#fff")};
   margin-left: ${(props) => (props.marginLeft ? props.marginLeft : '0px')};
   margin-top: ${(props) => (props.marginTop ? props.marginTop : '0px')};
+  line-height: 1.2;
+  width: 50vw;
   @media (max-width: 768px) {
-    font-size: ${px2vw(70, 768)};
+    font-size: ${px2vw(65, 768)};
   }
-  @media (max-width: 1024px) {
-    font-size: ${px2vw(70, 1024)};
+  @media (max-width: 600px) {
+    font-size: ${px2vw(65, 768)};
+    width: 80vw;
   }
+
 `;
 export const Title = styled.label<Props>`
+  display: flex;
   font-size: 50px;
+
   font-family: bold;
-  
   background-color: transparent;
   color: ${(props) => (props.color ? props.color : "#fff")};
   margin-left: ${(props) => (props.marginLeft ? props.marginLeft : '0px')};
   margin-top: ${(props) => (props.marginTop ? props.marginTop : '0px')};
   z-index: 1;
+  line-height-step: 5px;
+  line-height: 0.1;
   @media (max-width: 768px) {
-    font-size: ${px2vw(46, 768)};
-    width: 90%;
+    font-size: ${px2vw(50, 768)};
   }
 
 `;
 export const SubTitle = styled.label<Props>`
-  font-size: 28px;
+  font-size: 26px;
   font-family: bold;
   background-color: transparent;
   color: ${(props) => (props.color ? props.color : "#fff")};
-  margin-left: ${(props) => (props.marginLeft ? props.marginLeft : '0px')};
-  margin-top: ${(props) => (props.marginTop ? props.marginTop : '0px')};  
+
+  
   @media (max-width: 790px) {
     font-size: ${px2vw(24, 790)};
+    margin-top: 10px;
+    
   }
 `;
 export const Logo = styled(Image) `
-  width: 500px;
-  height: 500px;
-  margin-top: -180px;
+  width: 350px;
+  height: 450px;
+  align-self: center;
   background-color: transparent;
-  @media (max-width: 1024px) {
-    width: ${px2vw(500, 1024)};
-    height: ${px2vw(500, 1024)};
+  
+  @media (max-width: 1124px) {
+    width: ${px2vw(350, 1024)};
+    height: ${px2vw(450, 1024)};
     margin-top: ${px2vw(-160, 1024)};
   }
     @media (max-width: 600px) {
-
+      width: 100%;
+      height: 100%;
+    align-self: center;
     margin-top: ${px2vw(-40, 600)};
 
   }
 `;
 export const Form = styled.div<Props>`
-  width: ${(props) => (props.width ? props.width : null)};
+  width: 100%;
   height: ${(props) => (props.height ? props.height : null)};
   justify-content: ${(props) => (props.justifyContent ? props.justifyContent : 'flex-start')};
   background-color: transparent;
   display: flex;
-  flex-direction: ${(props) => (props.flexDirection ? props.flexDirection : 'column')};
-  margin-left: ${(props) => (props.marginLeft ? props.marginLeft : '0px')};
-  margin-top: ${(props) => (props.marginTop ? props.marginTop : '0px')};
-  margin-bottom: ${(props) => (props.marginBottom ? props.marginBottom : '0px')};
-`;
-export const FormSmallCard = styled.div<Props>`
-  justify-content: space-between;
-  background-color: transparent;
-  display: flex;
-  flex-direction: row;
-  margin-bottom: 50px;
+  flex-direction: ${(props) => (props.flexDirection ? props.flexDirection : 'row')};
+  align-self: ${(props) => (props.alignSelf ? props.alignSelf : null)};
+  @media (max-width: 600px) {
+    flex-direction: column;
 
-  @media (max-width: 700px) {
-    flex-direction: column;    
   }
+;
+  
 `;
 export const Button = styled.button`
   width: 150px;
@@ -128,48 +148,31 @@ export const Button = styled.button`
   color:#fff;
   font-size: 18px;
   font-family: bold;
-  margin-top:-80px;
-  margin-left:100px;
+  margin-top:20vh;
+  margin-left: 10vh;
   
 
-  @media (max-width: 840px) {
+  @media (max-width: 938px) {
+    margin-top: 200px;
     align-self: center;
-    margin-top: 10px;
+    margin-left: 0;
+  }
+  @media (max-width: 711px) {
+    margin-top: 20vh;
+    margin-left: 0px;
+}
+  
+  
+`;
+export const FormButton = styled.div`
+    display:flex;    
+    background-color: transparent;
+    height: 70px ;
+    width: 100%;
+  
+    @media (max-width: 900px) {
+      justify-content: center;
     margin-left:0px;
-  }
-`;
-export const Input = styled.input`
-  width: 300px;
-  height: 60px;
-  background-color: white;
-  color: ${Theme.color.secondary_100};
-  font-size: 20px;
-  font-family: bold;
-  border-radius: 10px;
-  margin-right: 10px;
-  margin-top: 40px;
-  padding: 10px;
-  &::placeholder {
-      color: ${Theme.color.secondary_100};
-    }
-    @media (max-width: 500px) {
-    font-size: ${px2vw(18, 500)};
-    width: ${px2vw(300, 500)};
-    height: ${px2vw(60, 500)};
     
-    padding: ${px2vw(10, 500)};
-  }
-
-`;
-export const SquareStyle = styled.div`
-  height: 10px;
-  width: 200px;
-  background-color: ${Theme.color.secondary_100};
-  margin-top: -20px;
-  z-index: 0;
-  margin-bottom: 10px;
-  @media (max-width: 769px) {
-    margin-top: ${px2vw(-20, 769)};
-    width:${px2vw(200, 769)};
   }
 `;
