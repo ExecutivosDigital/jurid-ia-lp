@@ -142,11 +142,15 @@ export const DropdownOption = styled.div`
   width: 100%;
   height: 50px;
   font-size: 18px;
- font-family: bold;
- color: #000;
-
-
+  font-family: bold;
+  color: #000;
 `;
+export const LiTitle = styled.li`
+  font-size: 18px;
+  font-family: bold;
+  color: #000;
+  background-color: transparent;
+`
 export const DownIco = styled(Image)`
     width: 15px;
     height: 15px;

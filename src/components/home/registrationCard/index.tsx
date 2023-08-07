@@ -1,5 +1,5 @@
 import Theme from "@/styles/themes";
-import { Container, Input, Registration, Title, Button, DropDownButton, DownIco, DropdownContainer, DropdownOption, Form, SubTitle } from "./styles";
+import { Container, Input, Registration, Title, Button, DropDownButton, DownIco, DropdownContainer, DropdownOption, Form, SubTitle, LiTitle } from "./styles";
 import React, { useState } from 'react';
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import {  firebaseAuth, firebaseApp} from "../../../utils/firebase-config";
@@ -90,7 +90,7 @@ export default function RegistrationCard() {
                     <DropdownContainer >
                         {options.map((option) => (
                             <DropdownOption key={option} onClick={() => handleOptionSelect(option)}>
-                               {option}
+                               <LiTitle>{option}</LiTitle>
                             </DropdownOption>
                         ))}
                     </DropdownContainer>
