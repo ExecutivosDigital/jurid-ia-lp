@@ -173,3 +173,43 @@ export const SquareStyle = styled.div`
     width:${px2vw(200, 769)};
   }
 `;
+export const VideoPlayer = styled.div`
+  background-color: transparent;
+  display: flex;
+  width: 80vw;
+  height: auto;
+  align-self: center;
+  border: 2px solid ${Theme.color.secondary_100};
+`;
+export const VideoContainer = styled.div`
+position: relative;
+  width: 100%; /* Ocupa 100% da largura disponível */
+  padding-bottom: 56.25%; /* Proporção de aspecto 16:9 */
+  height: 0; /* Definido para 0 para calcular a altura com base no padding-bottom */
+
+`;
+
+export const VideoFrame = styled.iframe`
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: none;
+`;
+export const VideoTitle = styled.div`
+  background-color: ${Theme.color.secondary_100};
+  width: 70vw;
+  height: 100%;
+  align-self: center;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 50px;
+  font-family: bold;
+  font-weight: bold;
+  border-radius: 10px;
+  @media (max-width: 790px) {
+    font-size: ${px2vw(45, 790)};
+    width: 80vw;
+  }
+`;

@@ -1,5 +1,5 @@
 import Theme from "@/styles/themes";
-import { BigTitle, Button, Container, Form, FormSmallCard, Input, Logo, Section, SquareStyle, SubTitle, Title } from "./styles";
+import { BigTitle, Button, Container, Form, FormSmallCard, Input, Logo, Section, SquareStyle, SubTitle, Title, VideoContainer, VideoFrame, VideoPlayer, VideoTitle } from "./styles";
 import Icon from "../../../public/favicon.ico"
 import RegistrationCard from "@/components/home/registrationCard";
 import InfoCardLarge from "@/components/home/infoCard/large";
@@ -10,10 +10,8 @@ import { useRef, useState } from "react";
 import FadeInAnimation from "@/components/home/animacoes/fadeIn/FadeInAnimation";
 import SlideInFromLeft from "@/components/home/animacoes/slideIn/SlideInFromLeft";
 import SlideInFromBottom from "@/components/home/animacoes/slideIn/SlideInFromBottom";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-import Ico2 from '../../../public/2.svg'
-import Ico3 from '../../../public/3.svg'
-import Ico4 from '../../../public/4.svg'
 
 export default function Home() {
   const registrationCardRef = useRef(null);
@@ -85,6 +83,15 @@ export default function Home() {
       </FormSmallCard>
     </Section>
     {/* fourth Section */}
+    <Section>
+      <VideoTitle>Jurid IA Explicado para Você</VideoTitle>
+      <VideoPlayer>
+        <VideoContainer >
+          <VideoFrame   src="https://www.youtube.com/embed/2pBZoxaX5zw" title="⚖️Lista de Espera Exclusiva - Jurid IA 🧠" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen />
+        </VideoContainer>
+
+      </VideoPlayer>
+    </Section>
     <Section ref={registrationCardRef}>
      <FadeInAnimation delay={0.5}>
       <RegistrationCard/>
