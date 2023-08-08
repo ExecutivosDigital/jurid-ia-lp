@@ -156,3 +156,20 @@ export const DownIco = styled(Image)`
     height: 15px;
     background-color: transparent;
 `
+export const LgpdTitle = styled.label<Props>`
+  padding-left: 5px;
+  padding-right: 4px;
+  width: 70%;
+  font-size: 10px;
+  font-family: bold;
+  background-color: transparent;
+  color: ${Theme.color.primary_100};
+  margin-left: 5px;
+  margin-top: 5px;
+
+  @media (max-width: 768px) {
+    font-size: ${px2vw(10, 768)};
+    width: 90%
+  }
+
+`;

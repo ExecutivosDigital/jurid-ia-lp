@@ -18,7 +18,8 @@ export default function ChangeBudgetStatusModal({
   const fixedLink = "https://listadeespera.juridia.com.br"; // Texto fixo do input
   const inputRef = useRef<HTMLInputElement>(null);
   const openWhatsapp = () => {
-    window.open("https://wa.me/send?text=Ja%20viu%20a%20nova%20Intligencia%20Artificial%20Juridica?%20Acesse%20para%20saber%20os%20benficios%20https://listadeespera.juridia.com.br");
+    window.open("https://wa.me/send?text=Ja%20viu%20a%20nova%20Intligencia%20Artificial%20Juridica?%0AAcesse%20para%20saber%20os%20benficios:%0Ahttps://listadeespera.juridia.com.br");
+
 } 
   const handleCopyClick = () => {
     try {

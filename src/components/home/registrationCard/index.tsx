@@ -1,5 +1,5 @@
 import Theme from "@/styles/themes";
-import { Container, Input, Registration, Title, Button, DropDownButton, DownIco, DropdownContainer, DropdownOption, Form, SubTitle, LiTitle } from "./styles";
+import { Container, Input, Registration, Title, Button, DropDownButton, DownIco, DropdownContainer, DropdownOption, Form, SubTitle, LiTitle, LgpdTitle } from "./styles";
 import React, { useState } from 'react';
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import {  firebaseAuth, firebaseApp} from "../../../utils/firebase-config";
@@ -95,6 +95,7 @@ export default function RegistrationCard() {
                         ))}
                     </DropdownContainer>
                 )}
+                <LgpdTitle>Seus dados estão seguros conosco! Ao preencher este formulário, você está consentindo que utilizemos suas informações para fornecer atualizações e informações relacionadas ao nosso conteúdo exclusivo. Comprometemo-nos a proteger sua privacidade e garantimos que seus dados serão tratados de acordo com as regulamentações da Lei Geral de Proteção de Dados (LGPD).</LgpdTitle>
                 <SubTitle size={5} color="red">{isFieldsValid ? "" : "*Preencha os campos acima Corretamente"}</SubTitle>
                 {/* <Button onClick={handleSend}> */}
                 <Button  onClick={handleButtonClick}>
