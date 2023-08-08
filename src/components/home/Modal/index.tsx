@@ -15,8 +15,11 @@ export default function ChangeBudgetStatusModal({
   close,
 }: ModalProps) {
   const [copyButtonText, setCopyButtonText] = useState("Copiar");
-  const fixedLink = "JuridIa.com"; // Texto fixo do input
+  const fixedLink = "https://listadeespera.juridia.com.br"; // Texto fixo do input
   const inputRef = useRef<HTMLInputElement>(null);
+  const openWhatsapp = () => {
+    window.open("https://wa.me/send?text=Ja%20viu%20a%20nova%20Intligencia%20Artificial%20Juridica?%20Acesse%20para%20saber%20os%20benficios%20https://listadeespera.juridia.com.br");
+} 
   const handleCopyClick = () => {
     try {
       if (inputRef.current) {
@@ -50,13 +53,17 @@ export default function ChangeBudgetStatusModal({
             <Title size={20} marginTop='10px' ><strong style={{backgroundColor:'transparent', color:'#D2AE6D' , fontWeight:'normal'}} >#COMPARTILHE </strong>COM SEUS AMIGOS JURISTAS</Title>
                       
             {/* <SocialButton><InstagramImage src="/instagram.svg"/></SocialButton> */}
-            <SocialButton><WhatsAppImage src="/whatsapp.svg"/></SocialButton>
+        
+              <SocialButton onClick={openWhatsapp}>
+                <WhatsAppImage src="/whatsapp.svg" />
+              </SocialButton>
+
             
             <Form>
             <Link autoComplete="off" ref={inputRef} value={fixedLink}></Link>
             <CopyButton onClick={handleCopyClick}>{copyButtonText}</CopyButton>
             </Form>
-            <FinishButton onClick={close}> fechar</FinishButton>
+            <FinishButton onClick={close}> Fechar</FinishButton>
           </FormText>
 
       </Content>
