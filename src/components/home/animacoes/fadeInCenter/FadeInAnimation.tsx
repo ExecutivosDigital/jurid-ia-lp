@@ -6,7 +6,7 @@ interface FadeInWithIntersectionProps {
   delay?: number;
 }
 
-const FadeInAnimation: React.FC<FadeInWithIntersectionProps> = ({ children, delay = 0}) => {
+const FadeInCenterAnimation: React.FC<FadeInWithIntersectionProps> = ({ children, delay = 0}) => {
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1,
@@ -15,7 +15,7 @@ const FadeInAnimation: React.FC<FadeInWithIntersectionProps> = ({ children, dela
 
   return (
     <motion.div
-      style={{ backgroundColor: 'transparent', alignItems: 'center' }}
+      style={{ backgroundColor: 'transparent', alignSelf: 'center' }}
       ref={ref}
       initial={{ opacity: 0 }}
       animate={{ opacity: inView ? 1 : 0 }} // Altera a opacidade com base na visibilidade
@@ -27,4 +27,4 @@ const FadeInAnimation: React.FC<FadeInWithIntersectionProps> = ({ children, dela
 };
 
 
-export default FadeInAnimation;
+export default FadeInCenterAnimation;

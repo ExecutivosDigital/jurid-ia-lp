@@ -11,6 +11,7 @@ import FadeInAnimation from "@/components/home/animacoes/fadeIn/FadeInAnimation"
 import SlideInFromLeft from "@/components/home/animacoes/slideIn/SlideInFromLeft";
 import SlideInFromBottom from "@/components/home/animacoes/slideIn/SlideInFromBottom";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import FadeInCenterAnimation from "@/components/home/animacoes/fadeInCenter/FadeInAnimation";
 
 
 export default function Home() {
@@ -85,12 +86,16 @@ export default function Home() {
     {/* fourth Section */}
     <Section>
       <VideoTitle>Jurid IA Explicado para Você</VideoTitle>
-      <VideoPlayer>
-        <VideoContainer >
-          <VideoFrame   src="https://www.youtube.com/embed/2pBZoxaX5zw" title="⚖️Lista de Espera Exclusiva - Jurid IA 🧠" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen />
-        </VideoContainer>
-
-      </VideoPlayer>
+        <VideoPlayer>
+          <VideoContainer >
+            <VideoFrame 
+            src="https://www.youtube.com/embed/2pBZoxaX5zw?autoplay=1" 
+            title="⚖️Lista de Espera Exclusiva - Jurid IA 🧠" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowFullScreen 
+            />
+          </VideoContainer>
+        </VideoPlayer>
     </Section>
     <Section ref={registrationCardRef}>
      <FadeInAnimation delay={0.5}>

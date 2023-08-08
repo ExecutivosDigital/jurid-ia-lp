@@ -20,6 +20,14 @@ function MyApp({ Component, pageProps }: any) {
         <meta charSet="utf-8" />
         <title>Lista de Espera da Jurid-IA</title>
         <link rel="canonical" href="https://listadeespera.juridia.com.br" />
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-F22DKXHTTP"></script>
+        <script dangerouslySetInnerHTML={{ __html: `
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-F22DKXHTTP');
+          `}}>           
+        </script>
       </Head>
       <ThemeProvider theme={Theme}>
         <GlobalStyle />
